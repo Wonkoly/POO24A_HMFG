@@ -55,21 +55,21 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Clases\CSaludar.cs" />
-    <Compile Include="Vsitas\Menu.cs">
+    <Compile Include="Vistas\Menu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Vsitas\Menu.Designer.cs">
+    <Compile Include="Vistas\Menu.Designer.cs">
       <DependentUpon>Menu.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Vsitas\Practica1.cs">
+    <Compile Include="Vistas\Practica1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Vsitas\Practica1.Designer.cs">
+    <Compile Include="Vistas\Practica1.Designer.cs">
       <DependentUpon>Practica1.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Vsitas\Menu.resx">
+    <EmbeddedResource Include="Vistas\Menu.resx">
       <DependentUpon>Menu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -82,7 +82,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="Vsitas\Practica1.resx">
+    <EmbeddedResource Include="Vistas\Practica1.resx">
       <DependentUpon>Practica1.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
