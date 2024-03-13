@@ -28,34 +28,26 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnHumano = new System.Windows.Forms.Button();
             this.SuspendLayout();
-            // 
-            // btnHumano
-            // 
-            this.btnHumano.Location = new System.Drawing.Point(311, 90);
-            this.btnHumano.Name = "btnHumano";
-            this.btnHumano.Size = new System.Drawing.Size(178, 89);
-            this.btnHumano.TabIndex = 0;
-            this.btnHumano.Text = "Humano";
-            this.btnHumano.UseVisualStyleBackColor = true;
-            this.btnHumano.Click += new System.EventHandler(this.btnHumano_Click);
             // 
             // Menu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(982, 571);
-            this.Controls.Add(this.btnHumano);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(1262, 673);
+            this.Font = new System.Drawing.Font("Pokemon Classic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.Name = "Menu";
-            this.Text = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Menu";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Button btnHumano;
     }
 }
 

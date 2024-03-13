@@ -59,6 +59,17 @@ namespace POO24A_HMFG.Vsitas
             "Fornica"
         };
 
+        Dictionary<int, string> Departamentos = new Dictionary<int, string>
+        {
+            { 1, "RH" },
+            { 2, "Ventas" },
+            { 3, "Mantenimiento" },
+            { 4, "Administracion"},
+            { 5, "Operaciones"},
+            { 6, "Personal"},
+            { 7, "Nada"}
+        };
+
         //---------------------------------------------------------------------
         //CONSTRUCTOR
         public Practica1()
@@ -68,16 +79,22 @@ namespace POO24A_HMFG.Vsitas
 
         private void btnEjecutar_Click(object sender, EventArgs e)
         {
+            //------------------------------------------------------------------
+            // Variables
             CPersona Persona;
             DateTime FechaNacimiento;
             r = new Random();
-            int sexo, pesoEntero, estatura, ano, mes, dia;
+            int sexo, pesoEntero, estatura, ano, mes, dia,  departamento, tipoPersona, edad;
             double peso;
             string nombreAleatorio, apellidoAleatorioP, apellidoAleatorioM;
-            Point posicion;
 
+            //------------------------------------------------------------------
+            // Inicio de Ciclo para llenar la tablita :3
             for (int i = 0; i < 100; i++)
             {
+
+                //------------------------------------------------------------------
+                // Inicilaizamos datos de la persona de manera aleatoria
                 sexo = r.Next(2);
                 ano = r.Next(2000, 2024);
                 mes = r.Next(1, 13);
@@ -86,9 +103,12 @@ namespace POO24A_HMFG.Vsitas
                 peso = r.NextDouble();
                 pesoEntero = r.Next(2, 4);
                 peso = pesoEntero + peso;
-                posicion = new Point(r.Next(0, 995), r.Next(0, 559));
-    
-                //Generamos nombres y apellidos aleatorios
+                FechaNacimiento = new DateTime(ano, mes, dia);
+                departamento = r.Next(1, Departamentos.Count);
+                tipoPersona = r.Next(2);
+
+                //------------------------------------------------------------------
+                // Generamos nombres deacuerdo a su sexo
                 if (sexo == 0)
                 {
                     nombreAleatorio = nombresFemeninos[r.Next(nombresFemeninos.Count)];
@@ -97,28 +117,53 @@ namespace POO24A_HMFG.Vsitas
                 {
                     nombreAleatorio = nombresMasculinos[r.Next(nombresMasculinos.Count)];
                 }
+
+                //------------------------------------------------------------------
+                // Generamos apellidos
                 apellidoAleatorioM = apellidos[r.Next(apellidos.Count)];
                 apellidoAleatorioP = apellidos[r.Next(apellidos.Count)];
 
-                FechaNacimiento = new DateTime(ano, mes, dia);
+                //------------------------------------------------------------------
+                // Generamos apellidos
+                if (tipoPersona == 0)
+                {
+                    Persona = new CPersona(nombreAleatorio, apellidoAleatorioP, apellidoAleatorioM, FechaNacimiento, sexo, estatura, peso);
+                }
+                else
+                {
+                    Persona = new CColaborador(nombreAleatorio, apellidoAleatorioP, apellidoAleatorioM, FechaNacimiento, sexo, estatura, peso, departamento);
+                }
 
-
-                Persona = new CPersona(nombreAleatorio, apellidoAleatorioP, apellidoAleatorioM, FechaNacimiento, sexo, estatura, peso, posicion);
-                int edad = Persona.GetDatosExtendidos().CalcularEdad();
+                //------------------------------------------------------------------
+                // Llenamos la tabla con lo datos
+                edad = Persona.GetDatosExtendidos().CalcularEdad();
                 dgvTablaNombres.Rows.Add();
                 dgvTablaNombres.Rows[i].Cells[0].Value = Persona.GetNombre();
                 dgvTablaNombres.Rows[i].Cells[1].Value = Persona.GetApellidoPaterno();
                 dgvTablaNombres.Rows[i].Cells[2].Value = Persona.GetApellidoMaterno();
                 dgvTablaNombres.Rows[i].Cells[3].Value = Persona.GetDatosExtendidos().GetFechaNacimiento("yyyy/MM/dd");
                 dgvTablaNombres.Rows[i].Cells[4].Value = edad;
-                dgvTablaNombres.Rows[i].Cells[5].Value = Persona.GetDatosExtendidos().GetSexoNacimiento();
+
                 dgvTablaNombres.Rows[i].Cells[6].Value = Persona.GetDatosExtendidos().GetEstatura();
                 dgvTablaNombres.Rows[i].Cells[7].Value = Persona.GetDatosExtendidos().GetPeso();
 
+
+                if (Persona.GetType() == typeof(CColaborador)) {
+
+                    dgvTablaNombres.Rows[i].Cells[8].Value = ((CColaborador)Persona).GetRFC();
+                    dgvTablaNombres.Rows[i].Cells[9].Value = Departamentos[((CColaborador)Persona).GetDepartamento()]; 
+
+                    dgvTablaNombres.Rows[i].Cells[8].Style.BackColor = Color.Aqua;
+                    dgvTablaNombres.Rows[i].Cells[9].Style.BackColor = Color.Aqua;
+                }
+
+
                 if (sexo == 0){
+                    dgvTablaNombres.Rows[i].Cells[5].Value = "Femenino";
                     dgvTablaNombres.Rows[i].Cells[5].Style.BackColor = Color.Pink;
                     dgvTablaNombres.Rows[i].Cells[0].Style.BackColor = Color.Pink;
                 }else{
+                    dgvTablaNombres.Rows[i].Cells[5].Value = "Masculino";
                     dgvTablaNombres.Rows[i].Cells[5].Style.BackColor = Color.AliceBlue; 
                     dgvTablaNombres.Rows[i].Cells[0].Style.BackColor = Color.AliceBlue; 
                 }
@@ -138,18 +183,12 @@ namespace POO24A_HMFG.Vsitas
                 {
                     dgvTablaNombres.Rows[i].Cells[4].Style.BackColor = Color.LightGreen;
                 }
-
-
-                tbMonitos.Controls.Add(Persona);
             }
         }
 
-
-
         private void btnMonito_Click(object sender, EventArgs e)
         {
-            Monito = new CCuerpo(new Point(100, 200));
-            tbMonitos.Controls.Add(Monito);
+
         }
     }
 }

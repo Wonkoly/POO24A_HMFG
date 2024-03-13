@@ -63,6 +63,16 @@ namespace POO24A_HMFG.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap busqueda {
+            get {
+                object obj = ResourceManager.GetObject("busqueda", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap D1 {
             get {
                 object obj = ResourceManager.GetObject("D1", resourceCulture);
@@ -96,6 +106,26 @@ namespace POO24A_HMFG.Properties {
         internal static System.Drawing.Bitmap D4 {
             get {
                 object obj = ResourceManager.GetObject("D4", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap exportar {
+            get {
+                object obj = ResourceManager.GetObject("exportar", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap exportar1 {
+            get {
+                object obj = ResourceManager.GetObject("exportar1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -40,11 +40,9 @@
             this.colSexo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colEstatura = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colPeso = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colRFC = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colDepartamento = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tbMonitos = new System.Windows.Forms.TabPage();
-            this.lbTitulo = new System.Windows.Forms.Label();
-            this.btnMostrar = new System.Windows.Forms.Button();
-            this.btnEjecutar = new System.Windows.Forms.Button();
-            this.btnMonito = new System.Windows.Forms.Button();
             this.pnlPrincipal.SuspendLayout();
             this.tabPracticas.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -53,15 +51,12 @@
             // 
             // pnlPrincipal
             // 
-            this.pnlPrincipal.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pnlPrincipal.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pnlPrincipal.BackColor = System.Drawing.Color.Ivory;
             this.pnlPrincipal.Controls.Add(this.tabPracticas);
-            this.pnlPrincipal.Location = new System.Drawing.Point(90, 76);
-            this.pnlPrincipal.Margin = new System.Windows.Forms.Padding(81, 66, 81, 66);
+            this.pnlPrincipal.Location = new System.Drawing.Point(84, 63);
             this.pnlPrincipal.Name = "pnlPrincipal";
-            this.pnlPrincipal.Size = new System.Drawing.Size(1002, 602);
+            this.pnlPrincipal.Size = new System.Drawing.Size(1082, 544);
             this.pnlPrincipal.TabIndex = 1;
             // 
             // tabPracticas
@@ -72,7 +67,7 @@
             this.tabPracticas.Location = new System.Drawing.Point(0, 0);
             this.tabPracticas.Name = "tabPracticas";
             this.tabPracticas.SelectedIndex = 0;
-            this.tabPracticas.Size = new System.Drawing.Size(1002, 602);
+            this.tabPracticas.Size = new System.Drawing.Size(1082, 544);
             this.tabPracticas.TabIndex = 4;
             // 
             // tabPage1
@@ -82,7 +77,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 30);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(994, 568);
+            this.tabPage1.Size = new System.Drawing.Size(1074, 510);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Tabla";
             // 
@@ -100,13 +95,15 @@
             this.colEdad,
             this.colSexo,
             this.colEstatura,
-            this.colPeso});
+            this.colPeso,
+            this.colRFC,
+            this.colDepartamento});
             this.dgvTablaNombres.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvTablaNombres.Location = new System.Drawing.Point(3, 3);
             this.dgvTablaNombres.Name = "dgvTablaNombres";
             this.dgvTablaNombres.RowHeadersWidth = 51;
             this.dgvTablaNombres.RowTemplate.Height = 24;
-            this.dgvTablaNombres.Size = new System.Drawing.Size(988, 562);
+            this.dgvTablaNombres.Size = new System.Drawing.Size(1068, 504);
             this.dgvTablaNombres.TabIndex = 0;
             // 
             // colNombre
@@ -157,76 +154,34 @@
             this.colPeso.MinimumWidth = 6;
             this.colPeso.Name = "colPeso";
             // 
+            // colRFC
+            // 
+            this.colRFC.HeaderText = "RFC";
+            this.colRFC.MinimumWidth = 6;
+            this.colRFC.Name = "colRFC";
+            // 
+            // colDepartamento
+            // 
+            this.colDepartamento.HeaderText = "Departamento";
+            this.colDepartamento.MinimumWidth = 6;
+            this.colDepartamento.Name = "colDepartamento";
+            // 
             // tbMonitos
             // 
             this.tbMonitos.Location = new System.Drawing.Point(4, 30);
             this.tbMonitos.Name = "tbMonitos";
             this.tbMonitos.Padding = new System.Windows.Forms.Padding(3);
-            this.tbMonitos.Size = new System.Drawing.Size(994, 568);
+            this.tbMonitos.Size = new System.Drawing.Size(1074, 488);
             this.tbMonitos.TabIndex = 1;
             this.tbMonitos.Text = "Monitos";
             this.tbMonitos.UseVisualStyleBackColor = true;
-            // 
-            // lbTitulo
-            // 
-            this.lbTitulo.AutoSize = true;
-            this.lbTitulo.Font = new System.Drawing.Font("Pokemon Classic", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbTitulo.ForeColor = System.Drawing.Color.Green;
-            this.lbTitulo.Location = new System.Drawing.Point(80, 9);
-            this.lbTitulo.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.lbTitulo.Name = "lbTitulo";
-            this.lbTitulo.Size = new System.Drawing.Size(349, 60);
-            this.lbTitulo.TabIndex = 0;
-            this.lbTitulo.Text = "Practica 1";
-            // 
-            // btnMostrar
-            // 
-            this.btnMostrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnMostrar.BackColor = System.Drawing.Color.Ivory;
-            this.btnMostrar.ForeColor = System.Drawing.Color.Green;
-            this.btnMostrar.Location = new System.Drawing.Point(336, 699);
-            this.btnMostrar.Name = "btnMostrar";
-            this.btnMostrar.Size = new System.Drawing.Size(141, 42);
-            this.btnMostrar.TabIndex = 2;
-            this.btnMostrar.Text = "Mostrar";
-            this.btnMostrar.UseVisualStyleBackColor = false;
-            // 
-            // btnEjecutar
-            // 
-            this.btnEjecutar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnEjecutar.BackColor = System.Drawing.Color.Ivory;
-            this.btnEjecutar.ForeColor = System.Drawing.Color.Green;
-            this.btnEjecutar.Location = new System.Drawing.Point(697, 699);
-            this.btnEjecutar.Name = "btnEjecutar";
-            this.btnEjecutar.Size = new System.Drawing.Size(141, 42);
-            this.btnEjecutar.TabIndex = 3;
-            this.btnEjecutar.Text = "Ejecutar";
-            this.btnEjecutar.UseVisualStyleBackColor = false;
-            this.btnEjecutar.Click += new System.EventHandler(this.btnEjecutar_Click);
-            // 
-            // btnMonito
-            // 
-            this.btnMonito.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.btnMonito.BackColor = System.Drawing.Color.Ivory;
-            this.btnMonito.ForeColor = System.Drawing.Color.Green;
-            this.btnMonito.Location = new System.Drawing.Point(520, 699);
-            this.btnMonito.Name = "btnMonito";
-            this.btnMonito.Size = new System.Drawing.Size(141, 42);
-            this.btnMonito.TabIndex = 4;
-            this.btnMonito.Text = "Monito";
-            this.btnMonito.UseVisualStyleBackColor = false;
-            this.btnMonito.Click += new System.EventHandler(this.btnMonito_Click);
             // 
             // Practica1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.PaleGreen;
-            this.ClientSize = new System.Drawing.Size(1182, 753);
-            this.Controls.Add(this.btnMonito);
-            this.Controls.Add(this.btnEjecutar);
-            this.Controls.Add(this.btnMostrar);
-            this.Controls.Add(this.lbTitulo);
+            this.ClientSize = new System.Drawing.Size(1262, 673);
             this.Controls.Add(this.pnlPrincipal);
             this.Font = new System.Drawing.Font("Pokemon Classic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
@@ -237,20 +192,15 @@
             this.tabPage1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvTablaNombres)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
         private System.Windows.Forms.Panel pnlPrincipal;
-        private System.Windows.Forms.Label lbTitulo;
         private System.Windows.Forms.TabControl tabPracticas;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tbMonitos;
-        private System.Windows.Forms.Button btnMostrar;
-        private System.Windows.Forms.Button btnEjecutar;
         private System.Windows.Forms.DataGridView dgvTablaNombres;
-        private System.Windows.Forms.Button btnMonito;
         private System.Windows.Forms.DataGridViewTextBoxColumn colNombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn colApellidoP;
         private System.Windows.Forms.DataGridViewTextBoxColumn colApellidoM;
@@ -259,5 +209,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn colSexo;
         private System.Windows.Forms.DataGridViewTextBoxColumn colEstatura;
         private System.Windows.Forms.DataGridViewTextBoxColumn colPeso;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colRFC;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colDepartamento;
     }
 }

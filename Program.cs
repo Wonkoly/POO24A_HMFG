@@ -1,4 +1,5 @@
-﻿using POO24A_HMFG.Vsitas;
+﻿using POO24A_HMFG.Vistas;
+using POO24A_HMFG.Vsitas;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,7 +18,7 @@ namespace POO24A_HMFG
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Practica1());
+            Application.Run(new Practica2());
         }
     }
 }

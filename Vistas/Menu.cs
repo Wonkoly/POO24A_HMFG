@@ -17,10 +17,5 @@ namespace POO24A_HMFG
         {
             InitializeComponent();
         }
-
-        private void btnHumano_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

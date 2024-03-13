@@ -35,6 +35,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -46,15 +47,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Clases\CColaborador.cs" />
     <Compile Include="Clases\CDatoExtendido.cs" />
     <Compile Include="Clases\CHumano.cs" />
     <Compile Include="Clases\CCuerpo.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Clases\CPersona.cs">
-      <SubType>Component</SubType>
-    </Compile>
+    <Compile Include="Clases\CPersona.cs" />
     <Compile Include="Clases\CSaludar.cs" />
+    <Compile Include="Clases\CServiciosMapasGoogle.cs" />
     <Compile Include="Vistas\Menu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -68,6 +69,12 @@
     </Compile>
     <Compile Include="Vistas\Practica1.Designer.cs">
       <DependentUpon>Practica1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Practica2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Practica2.Designer.cs">
+      <DependentUpon>Practica2.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Vistas\Menu.resx">
       <DependentUpon>Menu.cs</DependentUpon>
@@ -84,6 +91,9 @@
     </Compile>
     <EmbeddedResource Include="Vistas\Practica1.resx">
       <DependentUpon>Practica1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Practica2.resx">
+      <DependentUpon>Practica2.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -145,6 +155,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\U2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\busqueda.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exportar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exportar1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
