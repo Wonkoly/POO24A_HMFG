@@ -49,11 +49,17 @@
     <Compile Include="Class\CColaborador.cs" />
     <Compile Include="Class\CDatoExtendido.cs" />
     <Compile Include="Class\CHumano.cs" />
+    <Compile Include="Class\CJugador.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Class\ClasesPersonaje\CPlayer.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Class\ClasesPersonaje\CPlayer.Designer.cs">
       <DependentUpon>CPlayer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Class\CMovil.cs">
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Class\CPersona.cs" />
     <Compile Include="Class\CServiciosMapasGoogle.cs" />
@@ -77,6 +83,12 @@
     <Compile Include="Views\MenuViews\VMenu.Designer.cs">
       <DependentUpon>VMenu.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\PracticaGame.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\PracticaGame.Designer.cs">
+      <DependentUpon>PracticaGame.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\Practicas\CPractica1View.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -88,6 +100,12 @@
     </Compile>
     <Compile Include="Views\Practicas\CPractica2View.Designer.cs">
       <DependentUpon>CPractica2View.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Practicas\CPractica3View.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Practicas\CPractica3View.Designer.cs">
+      <DependentUpon>CPractica3View.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\Practicas\UserControl1.cs">
       <SubType>UserControl</SubType>
@@ -117,11 +135,17 @@
     <EmbeddedResource Include="Views\MenuViews\VMenu.resx">
       <DependentUpon>VMenu.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\PracticaGame.resx">
+      <DependentUpon>PracticaGame.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\Practicas\CPractica1View.resx">
       <DependentUpon>CPractica1View.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Practicas\CPractica2View.resx">
       <DependentUpon>CPractica2View.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Practicas\CPractica3View.resx">
+      <DependentUpon>CPractica3View.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Practicas\UserControl1.resx">
       <DependentUpon>UserControl1.cs</DependentUpon>

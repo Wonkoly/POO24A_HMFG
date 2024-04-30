@@ -39,6 +39,7 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.pbIconoPractica = new System.Windows.Forms.PictureBox();
             this.lbPracticaTitulo = new System.Windows.Forms.Label();
+            this.btnP3 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.btnInicio)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnConfig)).BeginInit();
             this.pnlMapa.SuspendLayout();
@@ -78,6 +79,9 @@
             // 
             // pnlMapa
             // 
+            this.pnlMapa.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.pnlMapa.Controls.Add(this.btnP3);
             this.pnlMapa.Controls.Add(this.btnP2);
             this.pnlMapa.Controls.Add(this.btnP1);
             this.pnlMapa.Controls.Add(this.cPlayer1);
@@ -88,7 +92,7 @@
             // 
             // btnP2
             // 
-            this.btnP2.Location = new System.Drawing.Point(166, 526);
+            this.btnP2.Location = new System.Drawing.Point(194, 524);
             this.btnP2.Name = "btnP2";
             this.btnP2.Size = new System.Drawing.Size(140, 41);
             this.btnP2.TabIndex = 11;
@@ -98,7 +102,7 @@
             // 
             // btnP1
             // 
-            this.btnP1.Location = new System.Drawing.Point(20, 526);
+            this.btnP1.Location = new System.Drawing.Point(48, 524);
             this.btnP1.Name = "btnP1";
             this.btnP1.Size = new System.Drawing.Size(140, 41);
             this.btnP1.TabIndex = 10;
@@ -119,6 +123,8 @@
             // 
             // pnlDinamico
             // 
+            this.pnlDinamico.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlDinamico.BackColor = System.Drawing.Color.Transparent;
             this.pnlDinamico.Location = new System.Drawing.Point(558, 18);
             this.pnlDinamico.Name = "pnlDinamico";
@@ -127,8 +133,11 @@
             // 
             // panel2
             // 
+            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.BackColor = System.Drawing.Color.Transparent;
             this.panel2.BackgroundImage = global::POO24A_HMFG.Properties.Resources.BarraEstado;
+            this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel2.Controls.Add(this.pbIconoPractica);
             this.panel2.Controls.Add(this.lbPracticaTitulo);
             this.panel2.Location = new System.Drawing.Point(562, 520);
@@ -153,6 +162,16 @@
             this.lbPracticaTitulo.Size = new System.Drawing.Size(31, 21);
             this.lbPracticaTitulo.TabIndex = 0;
             this.lbPracticaTitulo.Text = "...";
+            // 
+            // btnP3
+            // 
+            this.btnP3.Location = new System.Drawing.Point(340, 524);
+            this.btnP3.Name = "btnP3";
+            this.btnP3.Size = new System.Drawing.Size(140, 41);
+            this.btnP3.TabIndex = 12;
+            this.btnP3.Text = "Practica 3";
+            this.btnP3.UseVisualStyleBackColor = true;
+            this.btnP3.Click += new System.EventHandler(this.btnP3_Click);
             // 
             // CMenuPracticas
             // 
@@ -191,5 +210,6 @@
         private System.Windows.Forms.Button btnP1;
         private System.Windows.Forms.PictureBox pbIconoPractica;
         private System.Windows.Forms.Label lbPracticaTitulo;
+        private System.Windows.Forms.Button btnP3;
     }
 }

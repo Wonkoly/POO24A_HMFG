@@ -1,4 +1,5 @@
 ﻿
+using POO24A_HMFG.Views;
 using POO24A_HMFG.Views.MenuViews;
 using System;
 using System.Collections.Generic;
@@ -18,7 +19,7 @@ namespace POO24A_HMFG
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new VMenu());
+            Application.Run(new PracticaGame());
         }
     }
 }

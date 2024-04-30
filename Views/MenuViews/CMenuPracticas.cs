@@ -118,5 +118,15 @@ namespace POO24A_HMFG.Views.MenuViews
             labelText = "Practica 2: Buscador de Ubicaciones con Google Maps API.   ";
             carouselTimer.Start();
         }
+
+        private void btnP3_Click(object sender, EventArgs e)
+        {
+            CPractica3View practica3 = new CPractica3View();
+            practica3.Dock = DockStyle.Fill;
+            pnlDinamico.Controls.Clear();
+            pnlDinamico.Controls.Add(practica3);
+            labelText = "Practica 3: Juego Fachero de cositas que se mueven bien padre.   ";
+            carouselTimer.Start();
+        }
     }
 }
