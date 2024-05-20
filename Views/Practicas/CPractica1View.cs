@@ -1,12 +1,7 @@
 ﻿using POO24A_HMFG.Class;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace POO24A_HMFG.Views.Practicas
@@ -75,9 +70,12 @@ namespace POO24A_HMFG.Views.Practicas
         public CPractica1View()
         {
             InitializeComponent();
+
         }
 
-        private void btnEjecutar_Click(object sender, EventArgs e)
+        //---------------------------------------------------------------------
+        //BOTON EJECUTAR
+        private void btnEjecutar_Click_1(object sender, EventArgs e)
         {
             //------------------------------------------------------------------
             // Variables
@@ -188,6 +186,18 @@ namespace POO24A_HMFG.Views.Practicas
                     dgvTablaNombres.Rows[i].Cells[4].Style.BackColor = Color.LightGreen;
                 }
             }
+        }
+
+        private void btnEjecutar_MouseEnter(object sender, EventArgs e)
+        {
+            btnEjecutar.Image = Properties.Resources.btnPlantilla2;
+            btnEjecutar.ForeColor = Color.LightGray;
+        }
+
+        private void btnEjecutar_MouseLeave(object sender, EventArgs e)
+        {
+            btnEjecutar.Image = Properties.Resources.btnPlantilla1;
+            btnEjecutar.ForeColor = Color.White;
         }
     }
 }

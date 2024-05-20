@@ -119,6 +119,8 @@ namespace POO24A_HMFG.Views.MenuViews
             carouselTimer.Start();
         }
 
+        //-------------------------------------------------------------
+        //BOTON PRACTICA 2 (CALIS)
         private void btnP3_Click(object sender, EventArgs e)
         {
             CPractica3View practica3 = new CPractica3View();
@@ -127,6 +129,28 @@ namespace POO24A_HMFG.Views.MenuViews
             pnlDinamico.Controls.Add(practica3);
             labelText = "Practica 3: Juego Fachero de cositas que se mueven bien padre.   ";
             carouselTimer.Start();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            CPractica1View practica1 = new CPractica1View();
+            practica1.Dock = DockStyle.Fill;
+            pnlDinamico.Controls.Clear();
+            pnlDinamico.Controls.Add(practica1);
+            labelText = "Practica 1: Creacion de Personas Aleatorias.   ";
+            carouselTimer.Start();
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            CPractica2View practica2 = new CPractica2View();
+            practica2.Dock = DockStyle.Fill;
+            pnlDinamico.Controls.Clear();
+            pnlDinamico.Controls.Add(practica2);
+            labelText = "Practica 2: Buscador de Ubicaciones con Google Maps API.   ";
+            carouselTimer.Start();
+
         }
     }
 }

@@ -46,23 +46,29 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class\CColaborador.cs" />
-    <Compile Include="Class\CDatoExtendido.cs" />
-    <Compile Include="Class\CHumano.cs" />
-    <Compile Include="Class\CJugador.cs">
-      <SubType>Component</SubType>
+    <Compile Include="Class\ClasesPersonaje\CObjeto.cs">
+      <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="Class\ClasesPersonaje\CObjeto.Designer.cs">
+      <DependentUpon>CObjeto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Class\ClasesPractica1\CColaborador.cs" />
+    <Compile Include="Class\ClasesPractica1\CDatoExtendido.cs" />
+    <Compile Include="Class\ClasesPractica1\CHumano.cs" />
     <Compile Include="Class\ClasesPersonaje\CPlayer.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Class\ClasesPersonaje\CPlayer.Designer.cs">
       <DependentUpon>CPlayer.cs</DependentUpon>
     </Compile>
-    <Compile Include="Class\CMovil.cs">
+    <Compile Include="Class\ClasesPractica1\CPersona.cs" />
+    <Compile Include="Class\ClasesPractica2\CServiciosMapasGoogle.cs" />
+    <Compile Include="Class\ClasesPractica3\CBloqueador.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Class\CPersona.cs" />
-    <Compile Include="Class\CServiciosMapasGoogle.cs" />
+    <Compile Include="Class\ClasesPractica3\CMovil.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Views\MenuViews\CMenuInit.cs">
@@ -113,6 +119,9 @@
     <Compile Include="Views\Practicas\UserControl1.Designer.cs">
       <DependentUpon>UserControl1.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Class\ClasesPersonaje\CObjeto.resx">
+      <DependentUpon>CObjeto.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Class\ClasesPersonaje\CPlayer.resx">
       <DependentUpon>CPlayer.cs</DependentUpon>
     </EmbeddedResource>
@@ -250,5 +259,6 @@
   <ItemGroup>
     <None Include="Resources\btnExportar1.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

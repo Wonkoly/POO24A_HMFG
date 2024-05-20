@@ -51,27 +51,32 @@
             // 
             // rtbContenidoLugar
             // 
+            this.rtbContenidoLugar.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.rtbContenidoLugar.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.rtbContenidoLugar.Font = new System.Drawing.Font("Cascadia Code", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rtbContenidoLugar.Location = new System.Drawing.Point(3, 52);
             this.rtbContenidoLugar.Name = "rtbContenidoLugar";
-            this.rtbContenidoLugar.Size = new System.Drawing.Size(596, 370);
+            this.rtbContenidoLugar.Size = new System.Drawing.Size(631, 333);
             this.rtbContenidoLugar.TabIndex = 3;
             this.rtbContenidoLugar.Text = "";
             // 
             // tbAltura
             // 
+            this.tbAltura.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.tbAltura.Font = new System.Drawing.Font("Pokemon Classic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbAltura.Location = new System.Drawing.Point(447, 8);
+            this.tbAltura.Location = new System.Drawing.Point(482, 8);
             this.tbAltura.Name = "tbAltura";
             this.tbAltura.Size = new System.Drawing.Size(103, 40);
             this.tbAltura.TabIndex = 6;
             // 
             // label1
             // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Pokemon Classic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(321, 9);
+            this.label1.Location = new System.Drawing.Point(354, 11);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(132, 33);
             this.label1.TabIndex = 10;
@@ -79,8 +84,9 @@
             // 
             // lbUbicacion
             // 
+            this.lbUbicacion.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.lbUbicacion.AutoSize = true;
-            this.lbUbicacion.Location = new System.Drawing.Point(16, 433);
+            this.lbUbicacion.Location = new System.Drawing.Point(6, 398);
             this.lbUbicacion.Name = "lbUbicacion";
             this.lbUbicacion.Size = new System.Drawing.Size(123, 21);
             this.lbUbicacion.TabIndex = 12;
@@ -88,8 +94,9 @@
             // 
             // lbCordenadas
             // 
+            this.lbCordenadas.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.lbCordenadas.AutoSize = true;
-            this.lbCordenadas.Location = new System.Drawing.Point(16, 464);
+            this.lbCordenadas.Location = new System.Drawing.Point(6, 429);
             this.lbCordenadas.Name = "lbCordenadas";
             this.lbCordenadas.Size = new System.Drawing.Size(152, 21);
             this.lbCordenadas.TabIndex = 11;
@@ -97,9 +104,10 @@
             // 
             // btnExportar
             // 
+            this.btnExportar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnExportar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnExportar.Image = global::POO24A_HMFG.Properties.Resources.btnExportar1;
-            this.btnExportar.Location = new System.Drawing.Point(555, 6);
+            this.btnExportar.Location = new System.Drawing.Point(590, 6);
             this.btnExportar.Name = "btnExportar";
             this.btnExportar.Size = new System.Drawing.Size(40, 40);
             this.btnExportar.TabIndex = 5;
@@ -137,7 +145,7 @@
             this.Font = new System.Drawing.Font("Pokemon Classic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.Name = "CPractica2View";
-            this.Size = new System.Drawing.Size(602, 496);
+            this.Size = new System.Drawing.Size(637, 459);
             ((System.ComponentModel.ISupportInitialize)(this.btnExportar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnBuscar)).EndInit();
             this.ResumeLayout(false);

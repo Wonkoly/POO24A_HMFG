@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -57,7 +58,7 @@ namespace POO24A_HMFG.Class.ClasesPersonaje
 
         //------------------------------------
         //MOVIMIENTO DEL PERSONAJE
-        private void Mover(int deltaX, int deltaY)
+        protected void Mover(int deltaX, int deltaY)
         {
             this.Location = new Point(Location.X + deltaX, Location.Y + deltaY);
         }
@@ -86,7 +87,7 @@ namespace POO24A_HMFG.Class.ClasesPersonaje
 
         //------------------------------------
         //ANIMACIONES DE MOVIMIENTO
-        private void InitAnimation(string direccion)
+        protected void InitAnimation(string direccion)
         {
             switch (direccion)
             {
@@ -109,35 +110,35 @@ namespace POO24A_HMFG.Class.ClasesPersonaje
             }
         }
         //Animacion Caminar hacia la Deracha
-        private void animationTimer_Right(Object sender, EventArgs e)
+        protected void animationTimer_Right(Object sender, EventArgs e)
         {
             frameIndex = (frameIndex + 1) % moveRight.Length;
             Image newImage = ResizeImage(moveRight[frameIndex], this.Size);
             this.BackgroundImage = newImage;
         }
         //Animacion Caminar hacia Arriba
-        private void animationTimer_Up(Object sender, EventArgs e)
+        protected void animationTimer_Up(Object sender, EventArgs e)
         {
             frameIndex = (frameIndex + 1) % moveUp.Length;
             Image newImage = ResizeImage(moveUp[frameIndex], this.Size);
             this.BackgroundImage = newImage;
         }
         //Animacion Caminar hacia Abajo
-        private void animationTimer_Down(Object sender, EventArgs e)
+        protected void animationTimer_Down(Object sender, EventArgs e)
         {
             frameIndex = (frameIndex + 1) % moveDown.Length;
             Image newImage = ResizeImage(moveDown[frameIndex], this.Size);
             this.BackgroundImage = newImage;
         }
         //Animacion Caminar hacia Izquierda
-        private void animationTimer_Left(Object sender, EventArgs e)
+        protected void animationTimer_Left(Object sender, EventArgs e)
         {
             frameIndex = (frameIndex + 1) % moveLeft.Length;
             Image newImage = ResizeImage(moveLeft[frameIndex], this.Size);
             this.BackgroundImage = newImage;
         }
         //Funcion para redimencionar la Imagen del personaje
-        private Image ResizeImage(Image imagen, Size nuevoTamano)
+        protected Image ResizeImage(Image imagen, Size nuevoTamano)
         {
             return new Bitmap(imagen, nuevoTamano);
         }

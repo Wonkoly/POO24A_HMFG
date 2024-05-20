@@ -19,7 +19,7 @@ namespace POO24A_HMFG
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new PracticaGame());
+            Application.Run(new VMenu());
         }
     }
 }

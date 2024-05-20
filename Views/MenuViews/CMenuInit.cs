@@ -17,23 +17,16 @@ namespace POO24A_HMFG.Views.MenuViews
             InitializeComponent();
 
             //Configurar Picturbox como Panel
-            fondoGif.Controls.Add(btnMenuPracticas);
+            fondoGif.Controls.Add(btnPracticas);
             fondoGif.Controls.Add(btnSalir);
             fondoGif.Controls.Add(btnConfig);
-            fondoGif.Controls.Add(lbTitulo);
-            fondoGif.Controls.Add(label1);
-
-            //Configurar Titulos del los Botones
-            btnMenuPracticas.Controls.Add(lbBtnPracticas);
-            lbBtnPracticas.Location = new Point(45, 25);
-            btnSalir.Controls.Add(lbBtnSalir);
-            lbBtnSalir.Location = new Point(65, 25);
+            fondoGif.Controls.Add(layoutTitulo);
 
         }
     
         //-------------------------------------------------------------
         //BOTON MENU PRACTICAS
-        private void btnMenuPracticas_Click(object sender, EventArgs e)
+        private void btnPracticas_Click(object sender, EventArgs e)
         {
             // Eliminar controles del contenedor principal
             if (Parent != null && Parent.Controls.Count > 0)
@@ -50,49 +43,50 @@ namespace POO24A_HMFG.Views.MenuViews
                 menuPracticas.Focus();
             }
         }
-        private void btnMenuPracticas_MouseEnter(object sender, EventArgs e)
+        private void btnPracticas_MouseEnter(object sender, EventArgs e)
         {
-            btnMenuPracticas.Image = Properties.Resources.btnPlantilla2;
+            //Efecto de boton presionado
+            btnPracticas.Image = Properties.Resources.btnPlantilla2;
+            btnPracticas.ForeColor = System.Drawing.Color.LightGray;
         }
-
-        private void btnMenuPracticas_MouseLeave(object sender, EventArgs e)
+        private void btnPracticas_MouseLeave(object sender, EventArgs e)
         {
-            btnMenuPracticas.Image = Properties.Resources.btnPlantilla1;
+            //Efecto de boton presionado
+            btnPracticas.Image = Properties.Resources.btnPlantilla1;
+            btnPracticas.ForeColor = System.Drawing.Color.White;
         }
 
         //-------------------------------------------------------------
         //BOTON MENU SALIR
-        private void btnSalir_Click(object sender, EventArgs e)
+        private void btnSalir_Click_1(object sender, EventArgs e)
         {
             Application.Exit();
         }
-        private void btnSalir_MouseEnter(object sender, EventArgs e)
+        private void btnSalir_MouseEnter_1(object sender, EventArgs e)
         {
             btnSalir.Image = Properties.Resources.btnPlantilla2;
+            btnSalir.ForeColor = System.Drawing.Color.LightGray;
         }
-
-        private void btnSalir_MouseLeave(object sender, EventArgs e)
+        private void btnSalir_MouseLeave_1(object sender, EventArgs e)
         {
             btnSalir.Image = Properties.Resources.btnPlantilla1;
+            btnSalir.ForeColor = System.Drawing.Color.White;
         }
 
         //-------------------------------------------------------------
         //BOTON MENU CONFIGURACION
-        private void btnConfig_Click(object sender, EventArgs e)
+        private void btnConfig_Click_1(object sender, EventArgs e)
         {
-
+            //Abrir un formulario en forma de dialogo en donde se modificara la apariencia
 
         }
-
-        private void btnConfig_MouseEnter(object sender, EventArgs e)
+        private void btnConfig_MouseEnter_1(object sender, EventArgs e)
         {
             btnConfig.Image = Properties.Resources.btnConfig2;
         }
-
-        private void btnConfig_MouseLeave(object sender, EventArgs e)
+        private void btnConfig_MouseLeave_1(object sender, EventArgs e)
         {
             btnConfig.Image = Properties.Resources.btnConfig1;
         }
-
     }
 }

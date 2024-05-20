@@ -21,6 +21,10 @@ namespace POO24A_HMFG.Views.MenuViews
             menuInit.Dock = DockStyle.Fill;
             pnlContenido.Controls.Clear();
             pnlContenido.Controls.Add(menuInit);
+
+            CheckForIllegalCrossThreadCalls = false;
+            KeyPreview = true;
+
         }
 
         public void mostrarMenuPracticas()

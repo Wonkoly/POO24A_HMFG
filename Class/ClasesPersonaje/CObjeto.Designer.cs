@@ -1,6 +1,6 @@
-﻿namespace POO24A_HMFG.Views.Practicas
+﻿namespace POO24A_HMFG.Class.ClasesPersonaje
 {
-    partial class CPractica3View
+    partial class CObjeto
     {
         /// <summary> 
         /// Variable del diseñador necesaria.
@@ -28,20 +28,25 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            this.TimerCheckColision = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
-            // CPractica3View
+            // TimerCheckColision
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 21F);
+            this.TimerCheckColision.Interval = 10;
+            // 
+            // CObjeto
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Font = new System.Drawing.Font("Pokemon Classic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
-            this.Name = "CPractica3View";
-            this.Size = new System.Drawing.Size(602, 496);
+            this.Name = "CObjeto";
             this.ResumeLayout(false);
 
         }
 
         #endregion
+
+        private System.Windows.Forms.Timer TimerCheckColision;
     }
 }
