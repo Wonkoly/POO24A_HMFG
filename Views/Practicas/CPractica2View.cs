@@ -16,7 +16,7 @@ namespace POO24A_HMFG.Views.Practicas
         //------------------------------------------
         //ATRIBUTOS DE CLASE
         private CServiciosMapasGoogle ServicoMapa;
-        private const string LlaveAPIGoogleMaps = "AIzaSyAqPyie1EMOOceRXH7Nk7fSUBoxuhNv9wI";
+        private const string LlaveAPIGoogleMaps = "tu api key aqui :)";
         private string longitud, latitud, ubicacion;
 
         //------------------------------------------
